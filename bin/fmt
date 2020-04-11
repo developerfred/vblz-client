@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ -d ~/.vmodules/vblz ]; then
+    mv ~/.vmodules/vblz ~/.vmodules/old_vblz
+    rm -rf ~/.vmodules/vblz
+fi
+
+mkdir -p ~/.vmodules/vblz
+cp -r ./* ~/.vmodules/vblz
+
+find . -name "*.v" | xargs v fmt -w
+
+rm -rf ~/.vmodules/vblz
+[ -d ~/.vmodules/old_vblz ] && mv ~/.vmodules/old_vblz ~/.vmodules/vblz

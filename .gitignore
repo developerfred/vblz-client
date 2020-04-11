@@ -1,10 +1,11 @@
-node_modules
-yarn-error.log
-.DS_Store
-.idea/
-lib/*
-test-daemon/daemon-build
-yark.lock
-.nyc_output/
-package-lock.json
-samples/blz-config.js
+# Executables files
+test
+test.exe
+
+# Temporary files
+vblz.tmp.c
+fns.txt
+
+!/bin/test
+
+/docs/build
