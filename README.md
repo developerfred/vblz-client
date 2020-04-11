@@ -1,9 +1,29 @@
 [![Build Status](https://travis-ci.org/bluzelle/blzjs.svg?branch=devel)](https://travis-ci.org/bluzelle/blzjs) [![Coverage Status](https://coveralls.io/repos/github/bluzelle/blzjs/badge.svg)](https://coveralls.io/github/bluzelle/blzjs)
 <a href="https://bluzelle.com/"><img src='https://raw.githubusercontent.com/bluzelle/api/master/source/images/Bluzelle%20-%20Logo%20-%20Big%20-%20Colour.png' alt="Bluzelle" style="width: 100%"/></a>
 
-**blzjs** is a JavaScript library that can be used to access the Bluzelle database service.
+**vblz-client** is a v module library that can be used to access the Bluzelle database service.
 
-# blzjs Installation
+# vblz Installation
+
+Via vpm:
+
+```sh
+$ v install vblz
+```
+
+Via [vpkg](https://github.com/v-pkg/vpkg):
+
+```sh
+$ vpkg get https://github.com/developer/vblz
+```
+
+## Testing
+
+To test the module, just type the following command:
+
+```sh
+$ make test
+```
 
 You will generally use *blzjs* from code running under the **Node.js** platform. For instructions on installing Node.js on your platform please see http://nodejs.org. Use of *blzjs* in web browser content is not currently supported.
 
@@ -473,4 +493,3 @@ await api.update([{key: "key1", value: "value1"}, {key: "key2", value: "value2"}
 Returns a promise resolving to nothing.
 
 Throws an exception when any of the keys doesn't exist.
-
